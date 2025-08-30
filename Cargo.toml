@@ -48,7 +48,7 @@ path = "lib/counters"
 anyhow = { version = "1.0.31", default-features = false, features = ["std"] }
 array-init = { version = "2.1.0" }
 arrayvec = { version = "0.7.4", default-features = false }
-aspeed-ddk = { git = "https://github.com/aspeedtech-bmc/ast1060-rust.git" }
+aspeed-ddk = { git = "https://github.com/rusty1968/aspeed-rust.git", branch = "hash-owned" }
 ast1060-pac = { git = "https://github.com/aspeedtech-bmc/ast1060-pac.git" }
 atty = { version = "0.2", default-features = false }
 bitfield = { version = "0.13", default-features = false }
@@ -75,6 +75,7 @@ derive_more = { version = "0.99", default-features = false, features = ["from", 
 digest = { version = "0.10", default-features = false }
 dunce = { version = "1.0.2", default-features = false }
 embedded-hal = { version = "0.2", default-features = false }
+embedded-hal-1 = { package = "embedded-hal", version = "1.0", default-features = false }
 enum-kinds = { version = "0.5.1", default-features = false, features = ["no-stdlib"] }
 enum-map = { version = "2.7.3", default-features = false }
 filetime = { version = "0.2.12", default-features = false }
@@ -105,6 +106,7 @@ paste = { version = "1", default-features = false }
 path-slash = { version = "0.1.3", default-features = false }
 prettyplease = { version = "0.2.29", default-features = false }
 proc-macro2 = { version = "1", default-features = false }
+proposed-traits = { git = "https://github.com/rusty1968/proposed_traits.git", package = "proposed-traits", rev = "85641310df5a5276c67f81621b104322cff0286c" }
 quote = { version = "1", default-features = false }
 rand = { version = "0.8", default-features = false }
 rand_chacha = { version = "0.3", default-features = false }
@@ -137,8 +139,8 @@ toml = { version = "0.7", default-features = false, features = ["parse", "displa
 toml_edit = { version = "0.19", default-features = false }
 vcell = { version = "0.1.2", default-features = false }
 walkdir = { version = "2.0.0", default-features = false }
-zerocopy = { version = "0.8.25", default-features = false }
-zerocopy-derive = { version = "0.8.25", default-features = false }
+zerocopy = { version = "0.8.26", default-features = false }
+zerocopy-derive = { version = "0.8.26", default-features = false }
 zeroize = { version = "1.5.7", default-features = false, features = ["zeroize_derive"] }
 zip = { version = "0.6", default-features = false, features = ["bzip2", "deflate", "zstd"] }
 
@@ -162,6 +164,9 @@ tlvc-text = { git = "https://github.com/oxidecomputer/tlvc", default-features = 
 transceiver-messages = { git = "https://github.com/oxidecomputer/transceiver-control/", default-features = false }
 vsc7448-pac = { git = "https://github.com/oxidecomputer/vsc7448", default-features = false }
 
+## OpenPRot Initiative
+openprot-hal-blocking = { git = "https://github.com/OpenPRoT/openprot.git"  }
+openprot-platform-mock = { git = "https://github.com/OpenPRoT/openprot.git" }
 [workspace.lints.rust]
 elided_lifetimes_in_paths = "warn"
 
